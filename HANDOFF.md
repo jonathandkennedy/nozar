@@ -9,9 +9,13 @@
 - Every page: EN/ES switch (header toggle + "Se Habla Español" chip), `?lang=es`
   deep-link for Spanish ad groups, italic gold city in the headline, 3-step qualifying
   form, sticky mobile call bar, TCPA consent, honeypot
-- ALL pages ring **(310) 620-4400** (the firm's real line). Recommended before launch:
-  put a CallRail/tracking number in front of it — one edit in `build-masters.mjs`
-  (SHARED.phone/phoneDisplay) + re-run the two build commands swaps every page.
+- ALL pages ring the **CallScaler tracking number (213) 934-8686** (wired 2026-08-18;
+  the firm's real line is (310) 620-4400). VERIFY in CallScaler: forwarding →
+  (310) 620-4400, and recording/whisper settings. To swap numbers: edit
+  SHARED.phone/phoneDisplay/office/office_es in `build-masters.mjs`, sed the
+  hardcoded instances in `car-accident.html` + `thank-you.html`, re-run the two
+  build commands. Tracking number is for ad pages ONLY — never put it on GBP or
+  citations (NAP consistency).
 - Positioning: anti-billboard-mill ("You're a case, not a case number"), selective
   caseload, Josh-answers-his-phone (backed by real review quotes), 4.9★/40 Google
   reviews (real numbers, Aug 2026), $6.8M labeled honestly as construction-defect /
@@ -66,9 +70,8 @@ pageview. Publish the container when done.
 3. **Client sign-off** — Josh should confirm: the $6.8M line + its labeling, the
    "we limit our caseload" claims (his own site's words), 24/7 answering, and the
    Super Lawyers Rising Stars reference.
-4. (Recommended) **Tracking number** — put a CallRail number in front of
-   (310) 620-4400: edit SHARED.phone/phoneDisplay in `build-masters.mjs` + the two
-   hardcoded numbers in `thank-you.html`, re-run builds, push.
+4. **CallScaler check** — place one test call to (213) 934-8686 and confirm it
+   rings the firm and that call recording/whisper behaves as intended.
 
 ## Campaign guidance (from research/cpc-city-selection.md)
 - Tier 1 (cheapest CPC): Glendale+Burbank+Pasadena · Downey+Norwalk (**EN + ES ads**,

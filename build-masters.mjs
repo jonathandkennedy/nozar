@@ -16,13 +16,13 @@ const BASE = resolve(DIR, "car-accident.html");
 
 /* ---------------- shared geo data (single source of truth) ---------------- */
 const SHARED = {
-  phone: "+13106204400",
-  phoneDisplay: "(310) 620-4400",
+  phone: "+12139348686",
+  phoneDisplay: "(213) 934-8686",
   stars: "4.9★",
   review: "★ 4.9/5 · 40 Google reviews",
   review_es: "★ 4.9/5 · 40 reseñas en Google",
-  office: "Nozar Law, APC · 9171 Wilshire Blvd, Suite 500, Beverly Hills, CA 90210 · Free consult 24/7: (310) 620-4400",
-  office_es: "Nozar Law, APC · 9171 Wilshire Blvd, Suite 500, Beverly Hills, CA 90210 · Consulta gratis 24/7: (310) 620-4400",
+  office: "Nozar Law, APC · 9171 Wilshire Blvd, Suite 500, Beverly Hills, CA 90210 · Free consult 24/7: (213) 934-8686",
+  office_es: "Nozar Law, APC · 9171 Wilshire Blvd, Suite 500, Beverly Hills, CA 90210 · Consulta gratis 24/7: (213) 934-8686",
   sol: "In California you generally have two years from the crash to file — and claims against government entities (a city bus, a Metro vehicle, a dangerous road) require a formal claim within just six months. Evidence disappears far sooner: camera footage gets erased and witnesses move. The sooner Josh starts, the stronger your case.",
   sol_es: "En California generalmente tiene dos años desde el accidente para presentar su reclamo — y los reclamos contra entidades del gobierno (un autobús de la ciudad, un vehículo de Metro, una vía peligrosa) requieren un reclamo formal en solo seis meses. La evidencia desaparece mucho antes: los videos se borran y los testigos se mudan. Cuanto antes empiece Josh, más fuerte será su caso."
 };
