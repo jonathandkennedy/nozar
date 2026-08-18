@@ -27,25 +27,42 @@ node generate-geo.mjs --all  # bakes 5 masters × 12 cities
 Edit shared copy in `car-accident.html` (the base), per-case-type copy and the city
 list/serve lines in `build-masters.mjs`. New city = one entry in CITIES + re-run both.
 
+## Repo
+Canonical repo: https://github.com/jonathandkennedy/nozar (this folder = repo root,
+pushed 2026-08-18). Connect it to Vercel for auto-deploy on push to main.
+
+## Form — Formspree (WIRED + TESTED 2026-08-18)
+Endpoint `https://formspree.io/f/mqpzggrq` is live in all 5 masters and all 60 baked
+pages; verified 200 `{"ok":true}` via the full browser flow AND direct POST (two
+submissions named "TEST Setup Check — ignore" are in the Formspree inbox — seeing
+them confirms email delivery too). Emails arrive with subject "NozarLawPPC".
+Payload: `{name, phone, when, injured, case_type, geo, page, submitted, _subject}`.
+TO DO in Formspree settings: route notifications to an inbox intake watches 24/7,
+and restrict allowed domains to the production domain once deployed. Free tier =
+50 subs/mo; upgrade (or swap endpoint to a Zapier/Make webhook → CRM + instant SMS)
+for production. Speed-to-lead is the whole game: 5-min response = 21x qualification
+(MIT).
+
 ## TO DO before spending a dollar
-1. **Form endpoint** — `CONFIG.formEndpoint` is EMPTY (form shows success but sends
-   nothing). Create a Formspree form (or Zapier/Make webhook → CRM + instant SMS),
-   paste the URL into `CONFIG.formEndpoint` in `car-accident.html`, re-run both build
-   commands. Payload: `{name, phone, when, injured, case_type, geo, page, submitted,
-   _subject:"NozarLawPPC"}`. Speed-to-lead is the whole game: 5-min response = 21x
-   qualification (MIT).
-2. **GTM container** — `CONFIG.gtmId` in `car-accident.html` AND `GTM_ID` in
-   `thank-you.html` are empty. One container for all pages. Events already pushed:
-   `call_click` (any tel tap, with case_type+geo) and `lead_form_submit` (fires on
-   thank-you.html with case_type/geo/lang). Wire GA4 + Google Ads conversions to
-   those; count calls as conversions (56% of legal conversions are calls). Use EITHER
-   the event OR a /thank-you.html page trigger — not both (double-counts).
-3. **Domain** — deploy to Vercel (`npx vercel --prod`, static, no build step) behind a
-   firm-domain subdomain, e.g. `cases.nozarlaw.com` (CNAME → cname.vercel-dns.com).
+1. **GTM container** — checked 2026-08-18: nozarlaw.com has NO GTM and no GA4 at all,
+   so there is nothing to reuse. Create a fresh container at tagmanager.google.com
+   (Web), then paste the GTM-XXXXXXX into `CONFIG.gtmId` in `car-accident.html` AND
+   `GTM_ID` in `thank-you.html`, re-run the two build commands, push. Events already
+   pushed by the pages: `call_click` (any tel tap, with case_type+geo) and
+   `lead_form_submit` (fires on thank-you.html with case_type/geo/lang). Inside GTM:
+   GA4 tag + Google Ads conversion tags on those events; count calls as conversions
+   (56% of legal conversions are calls). Use EITHER the event OR a /thank-you.html
+   page trigger — not both (double-counts). Bonus: the same container's GA4 tag can
+   also go on nozarlaw.com itself — the site currently has zero analytics.
+2. **Domain** — in Vercel: import the GitHub repo (static, no build step), then add
+   a firm-domain subdomain, e.g. `cases.nozarlaw.com` (CNAME → cname.vercel-dns.com).
    **Never run ads to *.vercel.app** — display URL must match final URL domain.
-4. **Client sign-off** — Josh should confirm: the $6.8M line + its labeling, the
+3. **Client sign-off** — Josh should confirm: the $6.8M line + its labeling, the
    "we limit our caseload" claims (his own site's words), 24/7 answering, and the
    Super Lawyers Rising Stars reference.
+4. (Recommended) **Tracking number** — put a CallRail number in front of
+   (310) 620-4400: edit SHARED.phone/phoneDisplay in `build-masters.mjs` + the two
+   hardcoded numbers in `thank-you.html`, re-run builds, push.
 
 ## Campaign guidance (from research/cpc-city-selection.md)
 - Tier 1 (cheapest CPC): Glendale+Burbank+Pasadena · Downey+Norwalk (**EN + ES ads**,
