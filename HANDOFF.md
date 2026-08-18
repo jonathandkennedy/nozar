@@ -43,17 +43,23 @@ and restrict allowed domains to the production domain once deployed. Free tier =
 for production. Speed-to-lead is the whole game: 5-min response = 21x qualification
 (MIT).
 
+## Tracking — GTM (WIRED + TESTED 2026-08-18)
+Container **GTM-TQJQ9F6C** is live in all 5 masters, all 60 baked pages, and
+thank-you.html (`CONFIG.gtmId` in car-accident.html + `GTM_ID` in thank-you.html).
+Verified in-browser: gtm.js loads and processes both events —
+`call_click` {case_type, geo} on any tel tap, and `lead_form_submit`
+{case_type, geo, lang} on thank-you.html. (nozarlaw.com itself has NO GTM/GA4 —
+checked 2026-08-18; consider adding this same container to the main site.)
+**TO DO inside the GTM container** (it's wired but empty): add a GA4 config tag +
+Google Ads conversion tags fired on custom-event triggers `call_click` and
+`lead_form_submit`; count calls as conversions (56% of legal conversions are
+calls). Use EITHER the lead_form_submit event OR a /thank-you.html page trigger —
+not both (double-counts). Meta ads: fire the pixel Lead event on the thank-you
+pageview. Publish the container when done.
+
 ## TO DO before spending a dollar
-1. **GTM container** — checked 2026-08-18: nozarlaw.com has NO GTM and no GA4 at all,
-   so there is nothing to reuse. Create a fresh container at tagmanager.google.com
-   (Web), then paste the GTM-XXXXXXX into `CONFIG.gtmId` in `car-accident.html` AND
-   `GTM_ID` in `thank-you.html`, re-run the two build commands, push. Events already
-   pushed by the pages: `call_click` (any tel tap, with case_type+geo) and
-   `lead_form_submit` (fires on thank-you.html with case_type/geo/lang). Inside GTM:
-   GA4 tag + Google Ads conversion tags on those events; count calls as conversions
-   (56% of legal conversions are calls). Use EITHER the event OR a /thank-you.html
-   page trigger — not both (double-counts). Bonus: the same container's GA4 tag can
-   also go on nozarlaw.com itself — the site currently has zero analytics.
+1. **GTM tags** — see Tracking above: create GA4 + Ads conversion tags inside
+   GTM-TQJQ9F6C and publish the container.
 2. **Domain** — in Vercel: import the GitHub repo (static, no build step), then add
    a firm-domain subdomain, e.g. `cases.nozarlaw.com` (CNAME → cname.vercel-dns.com).
    **Never run ads to *.vercel.app** — display URL must match final URL domain.
