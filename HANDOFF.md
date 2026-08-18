@@ -10,8 +10,8 @@
   deep-link for Spanish ad groups, italic gold city in the headline, 3-step qualifying
   form, sticky mobile call bar, TCPA consent, honeypot
 - ALL pages ring the **CallScaler tracking number (213) 934-8686** (wired 2026-08-18;
-  the firm's real line is (310) 620-4400). VERIFY in CallScaler: forwarding →
-  (310) 620-4400, and recording/whisper settings. To swap numbers: edit
+  the firm's real line is (310) 620-4400). CallScaler forwarding + whisper configured
+  by Jon 2026-08-18. To swap numbers: edit
   SHARED.phone/phoneDisplay/office/office_es in `build-masters.mjs`, sed the
   hardcoded instances in `car-accident.html` + `thank-you.html`, re-run the two
   build commands. Tracking number is for ad pages ONLY — never put it on GBP or
@@ -70,8 +70,7 @@ pageview. Publish the container when done.
 3. **Client sign-off** — Josh should confirm: the $6.8M line + its labeling, the
    "we limit our caseload" claims (his own site's words), 24/7 answering, and the
    Super Lawyers Rising Stars reference.
-4. **CallScaler check** — place one test call to (213) 934-8686 and confirm it
-   rings the firm and that call recording/whisper behaves as intended.
+4. ~~CallScaler check~~ — DONE 2026-08-18: forwarding + whisper configured.
 
 ## Campaign guidance (from research/cpc-city-selection.md)
 - Tier 1 (cheapest CPC): Glendale+Burbank+Pasadena · Downey+Norwalk (**EN + ES ads**,
