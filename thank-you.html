@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#ffffff">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TQJQ9F6C');</script>
+<!-- End Google Tag Manager -->
 <title>Thank You | Nozar Law</title>
 <link rel="icon" type="image/webp" href="img/favicon.webp">
 <style>
@@ -40,6 +47,10 @@ footer p{max-width:70em;margin:0 auto}
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQJQ9F6C"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header class="hd">
   <div class="hd-in">
     <span class="logo"><b>NOZAR <i>LAW</i></b><span>Personal Injury Attorneys</span></span>
@@ -71,16 +82,8 @@ footer p{max-width:70em;margin:0 auto}
   var ct = q.get("ct") || "unknown";
   var es = q.get("lang") === "es";
 
-  /* GTM container (same for all cities), then the conversion event */
-  var GTM_ID = "GTM-TQJQ9F6C";  // must match the landers' CONFIG.gtmId
+  /* conversion event (GTM itself loads via the head snippet) */
   window.dataLayer = window.dataLayer || [];
-  if (GTM_ID) {
-    window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-    var gs = document.createElement("script");
-    gs.async = true;
-    gs.src = "https://www.googletagmanager.com/gtm.js?id=" + GTM_ID;
-    document.head.appendChild(gs);
-  }
   window.dataLayer.push({ event: "lead_form_submit", case_type: ct, geo: geo || "unknown", lang: es ? "es" : "en" });
 
   if (es) {

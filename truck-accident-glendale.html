@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#ffffff">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TQJQ9F6C');</script>
+<!-- End Google Tag Manager -->
 <title>Glendale Truck Accident Lawyer | Free Case Review 24/7 | Nozar Law, Beverly Hills</title>
 <meta name="description" content="Hit by a commercial truck? Their insurer has a team on it already. Josh Nozar levels the field. Free case review 24/7 · No fee unless we win · 4.9★ on Google · Se habla español.">
 <meta property="og:title" content="Glendale Truck Accident Lawyer | Nozar Law">
@@ -214,6 +221,10 @@ footer a{color:var(--slate)}
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQJQ9F6C"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <header class="hd">
   <div class="hd-in">
@@ -452,8 +463,8 @@ footer a{color:var(--slate)}
   var CONFIG = {
     // Paste a Formspree endpoint (https://formspree.io/f/XXXXXXXX) or any
     // CRM/Zapier/Make webhook URL. Empty = success screen only, nothing sent.
-    formEndpoint: "https://formspree.io/f/mqpzggrq",
-    gtmId: "GTM-TQJQ9F6C"  // GTM container for all pages; per-city override via "gtm" key in geo data
+    formEndpoint: "https://formspree.io/f/mqpzggrq"
+    // GTM (GTM-TQJQ9F6C) loads via the standard snippet in <head>
   };
 
   /* ---------- geo swap ---------- */
@@ -476,16 +487,7 @@ footer a{color:var(--slate)}
     document.querySelectorAll(".js-tel-text").forEach(function(s){ s.textContent = g.phoneDisplay; });
   }
 
-  /* ---------- GTM + conversion events ---------- */
-  var gtmId = g.gtm || CONFIG.gtmId;
-  if (gtmId) {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-    var gs = document.createElement("script");
-    gs.async = true;
-    gs.src = "https://www.googletagmanager.com/gtm.js?id=" + gtmId;
-    document.head.appendChild(gs);
-  }
+  /* ---------- conversion events (GTM itself loads via the head snippet) ---------- */
   function track(ev, extra) {
     window.dataLayer = window.dataLayer || [];
     var e = { event: ev, case_type: "truck-accident", geo: slug };
