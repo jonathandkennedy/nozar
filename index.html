@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Nozar Law — PPC Lander Review Hub</title>
+<link rel="icon" type="image/webp" href="img/favicon.webp">
+<style>
+:root{--ink:#181d29;--navy:#16213a;--gold:#b8912f;--gold-ink:#8a6d1f;--soft:#faf8f2;--line:#e7e1d0;--slate:#5d6472;
+--font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font);color:var(--ink);background:var(--soft);font-size:16px;line-height:1.5;padding:34px 20px 60px}
+.wrap{max-width:1040px;margin:0 auto}
+h1{font-size:1.6rem;font-weight:800;color:var(--navy);letter-spacing:-.01em}
+h1 i{font-style:normal;color:var(--gold-ink)}
+.note{margin:10px 0 4px;color:var(--slate);font-size:.86rem;max-width:62em}
+.note b{color:#a33}
+table{width:100%;border-collapse:collapse;margin-top:24px;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:.84rem}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--navy);color:#fff;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:700;color:var(--navy);white-space:nowrap}
+a{color:var(--gold-ink);text-decoration:none;font-weight:600;white-space:nowrap}
+a:hover{text-decoration:underline}
+.es{font-size:.72rem;color:var(--slate);font-weight:400}
+.masters{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
+.masters a{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;padding:10px 14px;font-size:.84rem}
+.legend{margin-top:14px;font-size:.76rem;color:var(--slate)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>NOZAR <i>LAW</i> — PPC Lander Review Hub</h1>
+  <p class="note">Internal review only — <b>never send ad traffic to this page</b>. Campaign URLs are the baked city pages below. Append <a href="car-accident-glendale.html?lang=es">?lang=es</a> to any page for the Spanish version (for ES ad groups). Masters also accept <code>?geo=slug</code> for testing.</p>
+  <div class="masters">
+    <a href="personal-injury.html">Master: Personal Injury</a>
+    <a href="car-accident.html">Master: Car Accident</a>
+    <a href="motorcycle-accident.html">Master: Motorcycle</a>
+    <a href="rideshare-accident.html">Master: Rideshare</a>
+    <a href="truck-accident.html">Master: Truck</a>
+    <a href="thank-you.html?geo=glendale&ct=car-accident">Thank-You (conversion page)</a>
+  </div>
+  <table id="grid"></table>
+  <p class="legend">60 baked pages · 5 case types × 12 cities · Tier 1 launch: Glendale, Burbank, Pasadena, Downey (ES), Norwalk (ES), West Covina, Pomona · Tier 2: Van Nuys, Encino, Beverly Hills · Tier 3: Los Angeles, Long Beach (PI/truck/moto only)</p>
+</div>
+<script>
+var CITIES = [["los-angeles","Los Angeles"],["beverly-hills","Beverly Hills"],["glendale","Glendale"],["burbank","Burbank"],["pasadena","Pasadena"],["van-nuys","Van Nuys"],["encino","Encino"],["long-beach","Long Beach"],["downey","Downey"],["norwalk","Norwalk"],["west-covina","West Covina"],["pomona","Pomona"]];
+var TYPES = [["personal-injury","Personal Injury"],["car-accident","Car"],["motorcycle-accident","Motorcycle"],["rideshare-accident","Rideshare"],["truck-accident","Truck"]];
+var h = "<tr><th>City</th>";
+TYPES.forEach(function(t){ h += "<th>" + t[1] + "</th>"; });
+h += "</tr>";
+CITIES.forEach(function(c){
+  h += "<tr><td>" + c[1] + "</td>";
+  TYPES.forEach(function(t){
+    var f = t[0] + "-" + c[0] + ".html";
+    h += '<td><a href="' + f + '">EN</a> · <a class="es" href="' + f + '?lang=es">ES</a></td>';
+  });
+  h += "</tr>";
+});
+document.getElementById("grid").innerHTML = h;
+</script>
+</body>
+</html>
