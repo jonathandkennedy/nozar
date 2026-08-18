@@ -48,8 +48,11 @@ for production. Speed-to-lead is the whole game: 5-min response = 21x qualificat
 (MIT).
 
 ## Tracking — GTM (WIRED + TESTED 2026-08-18)
-Container **GTM-TQJQ9F6C** is live in all 5 masters, all 60 baked pages, and
-thank-you.html (`CONFIG.gtmId` in car-accident.html + `GTM_ID` in thank-you.html).
+Container **GTM-TQJQ9F6C** loads via the standard Google snippet in `<head>` +
+`<noscript>` iframe on ALL 67 pages (landers, thank-you, and the hub — so
+"detect GTM" checks pass at any URL including the bare domain). The snippet is
+hardcoded in car-accident.html / thank-you.html / index.html; build-masters
+propagates it to the derived masters and baked pages.
 Verified in-browser: gtm.js loads and processes both events —
 `call_click` {case_type, geo} on any tel tap, and `lead_form_submit`
 {case_type, geo, lang} on thank-you.html. (nozarlaw.com itself has NO GTM/GA4 —
